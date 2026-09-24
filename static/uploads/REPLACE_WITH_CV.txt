@@ -1,0 +1,2 @@
+Replace this file by adding your current CV as:
+static/uploads/Ya_Wen_CV.pdf

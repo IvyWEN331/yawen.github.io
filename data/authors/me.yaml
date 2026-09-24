@@ -1,0 +1,107 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Ya Wen
+  given: Ya
+  family: Wen
+  alternate: ''
+  pronunciation: ''
+  pronouns: she/her
+postnominals:
+  - PhD
+status:
+  icon: "🏛️"
+role: Postdoctoral Research Associate
+bio: |
+  I am a Postdoctoral Research Associate at the University of Cambridge, working at the intersection of architecture, digital twins, reality capture, knowledge systems, and artificial intelligence for the built environment. My research focuses on how geometric, semantic, and operational information can be integrated into shared digital representations that support building design, operation, safety, and robotic collaboration.
+
+affiliations:
+  - name: University of Cambridge · Department of Engineering
+    url: https://www.eng.cam.ac.uk/
+
+links:
+  - icon: at-symbol
+    url: mailto:YOUR-EMAIL@example.com
+    label: Email
+  - icon: brands/github
+    url: https://github.com/IvyWEN331
+    label: GitHub
+  - icon: brands/linkedin
+    url: https://www.linkedin.com/in/YOUR-LINKEDIN/
+    label: LinkedIn
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/
+    label: Google Scholar
+  - icon: academicons/orcid
+    url: https://orcid.org/
+    label: ORCID
+
+interests:
+  - Digital Twins for the Built Environment
+  - Reality Capture and Scan-to-BIM
+  - Knowledge Graphs and Building Ontologies
+  - AI and Multi-Agent Systems
+  - Architecture Technology and Building Operations
+  - Robotics and Human–Building Interaction
+
+education:
+  - degree: PhD in Real Estate & Construction / Building Information Modelling
+    institution: The University of Hong Kong
+    start: 2019-09-01
+    end: 2023-07-31
+    summary: |
+      Research on construction safety knowledge, investment allocation, BIM, and decision-support methods.
+  - degree: MSc in Geospatial Engineering with BIM
+    institution: University of Nottingham Ningbo China
+    start: 2016-09-01
+    end: 2017-09-30
+  - degree: BEng (Hons) in Architecture
+    institution: University of Nottingham Ningbo China
+    start: 2012-09-01
+    end: 2016-07-31
+
+experience:
+  - role: Postdoctoral Research Associate
+    org: University of Cambridge · Department of Engineering
+    start: 2023-08-01
+    summary: |
+      Research on digital twins, reality capture, semantic enrichment, AI-enabled building information systems, and European collaborative research projects including BUILDSPACE.
+  - role: Researcher / Project Manager
+    org: Hong Kong
+    start: 2019-01-01
+    end: 2022-12-31
+    summary: |
+      Research and project delivery in BIM, digital construction, common data environments, and built-asset information management.
+
+skills:
+  - name: Research & Digital Built Environment
+    items:
+      - label: Digital Twin / BIM
+        level: 5
+      - label: Reality Capture / LiDAR / Photogrammetry
+        level: 5
+      - label: Knowledge Graphs / Ontologies
+        level: 4
+      - label: AI / Computer Vision
+        level: 4
+  - name: Academic & Professional
+    items:
+      - label: Research Design
+        level: 5
+      - label: Academic Writing
+        level: 5
+      - label: Teaching
+        level: 4
+      - label: International Project Collaboration
+        level: 5
+
+languages:
+  - name: English
+    level: 5
+    label: Professional
+  - name: Chinese (Mandarin)
+    level: 5
+    label: Native
+
+awards: []
