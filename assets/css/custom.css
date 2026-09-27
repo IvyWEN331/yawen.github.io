@@ -1,22 +1,33 @@
+
 /* Ya Wen homepage refinements */
 
-/* Add the Chinese name on its own line below the English name. */
+/* Add Chinese name on its own line */
 .resume-biography h1::after {
   content: "闻雅";
   display: block;
-  margin-top: 0.18em;
-  font-size: 0.58em;
+  margin-top: 0.14em;
+  font-size: 0.56em;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.15;
   letter-spacing: 0.08em;
 }
 
-/* Keep the profile typography clean and understated. */
 .resume-biography h1 {
   letter-spacing: -0.02em;
 }
 
-/* Education: convert HugoBlox cards into simple horizontal academic CV rows. */
+/* Make the summary/credential area a little tighter */
+.resume-biography p {
+  line-height: 1.45;
+}
+
+/* Make the line under the name slightly tighter and more academic */
+.resume-biography [class*="pronoun"],
+.resume-biography [class*="Pronoun"] {
+  line-height: 1.25 !important;
+}
+
+/* Education section: convert cards into horizontal rows */
 .resume-biography .grid:has(> .group) {
   display: block !important;
 }
@@ -24,7 +35,7 @@
 .resume-biography .grid:has(> .group) > .group {
   min-height: 0 !important;
   margin: 0 !important;
-  padding: 1.15rem 0 !important;
+  padding: 1.05rem 0 !important;
   border: 0 !important;
   border-top: 1px solid rgba(148, 163, 184, 0.24) !important;
   border-radius: 0 !important;
@@ -44,17 +55,15 @@
   transform: none !important;
 }
 
-/* Hide the round degree icon to keep the section minimal. */
 .resume-biography .grid:has(> .group) > .group > .flex > .flex-shrink-0 {
   display: none !important;
 }
 
-/* Degree | Institution | Date */
 .resume-biography .grid:has(> .group) > .group > .flex > .flex-1 {
   display: grid !important;
-  grid-template-columns: minmax(240px, 1.35fr) minmax(250px, 1.35fr) auto;
+  grid-template-columns: minmax(220px, 1.25fr) minmax(280px, 1.45fr) auto;
   align-items: baseline;
-  gap: 1rem 1.5rem;
+  gap: 0.4rem 1.25rem;
   width: 100%;
 }
 
@@ -62,15 +71,13 @@
   margin: 0 !important;
 }
 
-/* Degree */
 .resume-biography .grid:has(> .group) > .group > .flex > .flex-1 > p:nth-child(1) {
   grid-column: 1;
   font-size: 1.02rem !important;
-  font-weight: 600 !important;
-  line-height: 1.45;
+  font-weight: 650 !important;
+  line-height: 1.42;
 }
 
-/* Date */
 .resume-biography .grid:has(> .group) > .group > .flex > .flex-1 > p:nth-child(2) {
   grid-column: 3;
   grid-row: 1;
@@ -79,14 +86,23 @@
   font-size: 0.94rem !important;
 }
 
-/* Institution */
 .resume-biography .grid:has(> .group) > .group > .flex > .flex-1 > p:nth-child(3) {
   grid-column: 2;
   grid-row: 1;
   font-size: 0.98rem !important;
+  line-height: 1.45;
 }
 
-/* Mobile: stack each education entry cleanly. */
+/* Style the footprint image */
+.resume-biography img[alt="Academic footprint"] {
+  display: block;
+  width: 100%;
+  max-width: 820px;
+  margin: 1.1rem auto 0.6rem auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
 @media (max-width: 900px) {
   .resume-biography .grid:has(> .group) > .group > .flex > .flex-1 {
     grid-template-columns: 1fr;
@@ -100,9 +116,5 @@
     grid-row: auto;
     justify-self: start;
     white-space: normal;
-  }
-
-  .resume-biography .grid:has(> .group) > .group > .flex > .flex-1 > p:nth-child(3) {
-    order: 2;
   }
 }

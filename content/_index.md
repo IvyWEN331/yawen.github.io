@@ -8,12 +8,19 @@ sections:
   - block: resume-biography-3
     content:
       username: me
-      text: ''
+      text: |-
+        I am a Research Associate at the University of Cambridge, working at the intersection of architecture, digital twins, knowledge systems, and AI for the built environment.
+
+        Digital systems should help buildings and infrastructure deliver services more efficiently and intelligently. I explore how geometric, semantic, and dynamic operational information can be structured into shared knowledge that supports decisions across the built asset lifecycle and enables collaboration between people and AI.
+
+        ![Academic footprint](media/academic-footprint.svg)
+
+        *Academic footprint across Ningbo, Nottingham, and Hong Kong.*
       button:
         text: Download CV
         url: uploads/Ya_Wen_CV.pdf
       headings:
-        about: ''
+        about: 'Hi, I am Ya Wen'
         education: Education
         interests: Research Interests
     design:

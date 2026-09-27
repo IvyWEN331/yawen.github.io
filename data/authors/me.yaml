@@ -8,7 +8,7 @@ name:
   family: Wen
   alternate: 闻雅
   pronunciation: ''
-  pronouns: she/her
+  pronouns: Ph.D · B.Eng (Hons) Architecture · MSc (Distinction) · RIBA (Part I) · CCBC · GMInstCES
 
 postnominals:
   - PhD
@@ -19,7 +19,9 @@ status:
 role: Research Associate
 
 bio: |
-  I am a Research Associate at the University of Cambridge, working at the intersection of architecture, digital twins, reality capture, knowledge systems, and artificial intelligence for the built environment. My research focuses on how geometric, semantic, and operational information can be integrated into shared digital representations that support building design, operation, safety, and robotic collaboration.
+  I am a Research Associate at the University of Cambridge, working at the intersection of architecture, digital twins, knowledge systems, and artificial intelligence for the built environment.
+
+  Digital systems should help buildings and infrastructure deliver services more efficiently and intelligently. I explore how geometric, semantic, and dynamic operational information can be structured into shared knowledge that supports decisions across the built asset lifecycle and enables collaboration between people and AI.
 
 affiliations:
   - name: Postdoc
@@ -38,6 +40,9 @@ links:
   - icon: academicons/orcid
     url: https://orcid.org/0000-0002-6372-2946
     label: ORCID
+  - icon: academicons/researchgate
+    url: https://www.researchgate.net/profile/Ya-Wen-12/research
+    label: ResearchGate
 
 interests:
   - Digital Twins for the Built Environment
@@ -48,7 +53,7 @@ interests:
   - Robotics and Human–Building Interaction
 
 education:
-  - degree: PhD
+  - degree: PhD in Building Information Modelling
     institution: The University of Hong Kong
     year: Jan 2019 – Nov 2023
 
@@ -57,7 +62,7 @@ education:
     year: Sep 2016 – Sep 2017
 
   - degree: BEng (Hons) in Architecture
-    institution: University of Nottingham Ningbo China
+    institution: University of Nottingham Ningbo China · The University of Nottingham, UK (Exchange Programme, awarded to top 10% of students)
     year: Sep 2012 – Jul 2016
 
 experience:
