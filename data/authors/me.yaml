@@ -2,31 +2,27 @@ schema: hugoblox/author/v1
 slug: me
 is_owner: true
 name:
-  display: Ya Wen
+  display: Ya Wen 文雅
   given: Ya
   family: Wen
-  alternate: ''
+  alternate: 文雅
   pronunciation: ''
   pronouns: she/her
 postnominals:
   - PhD
 status:
   icon: "🏛️"
-role: Postdoctoral Research Associate
+
+role: Research Associate
+
 bio: |
-  I am a Postdoctoral Research Associate at the University of Cambridge, working at the intersection of architecture, digital twins, reality capture, knowledge systems, and artificial intelligence for the built environment. My research focuses on how geometric, semantic, and operational information can be integrated into shared digital representations that support building design, operation, safety, and robotic collaboration.
+  I am a Research Associate at the University of Cambridge, working at the intersection of architecture, digital twins, reality capture, knowledge systems, and artificial intelligence for the built environment. My research focuses on how geometric, semantic, and operational information can be integrated into shared digital representations that support building design, operation, safety, and robotic collaboration.
 
 affiliations:
-  - name: University of Cambridge · Department of Engineering
+  - name: Postdoc in the University of Cambridge Department of Engineering
     url: https://www.eng.cam.ac.uk/
 
 links:
-  - icon: at-symbol
-    url: mailto:YOUR-EMAIL@example.com
-    label: Email
-  - icon: brands/github
-    url: https://github.com/IvyWEN331
-    label: GitHub
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/YOUR-LINKEDIN/
     label: LinkedIn
@@ -62,7 +58,7 @@ education:
     end: 2016-07-31
 
 experience:
-  - role: Postdoctoral Research Associate
+  - role: Research Associate
     org: University of Cambridge · Department of Engineering
     start: 2023-08-01
     summary: |

@@ -1,5 +1,6 @@
 hugoblox:
   schema: "2.0"
+
   identity:
     name: "Ya Wen"
     organization: ""
@@ -8,36 +9,53 @@ hugoblox:
     description: "Ya Wen is a researcher working at the intersection of architecture, digital twins, reality capture, knowledge systems, and AI for the built environment."
     social:
       twitter: ""
+
   theme:
-    mode: system
+    mode: dark
     pack: "default"
     colors:
       primary: "indigo"
       secondary: "slate"
       neutral: ""
+    surfaces:
+      background: "#0b0d10"
+      foreground: "#f3f4f6"
+      header:
+        background: "#0b0d10"
+        foreground: "#f3f4f6"
+      footer:
+        background: "#0b0d10"
+        foreground: "#d1d5db"
+
   typography:
-    pack: "academic"
+    # HugoBlox's system-sans pack uses the native Apple system font on macOS
+    # and comparable clean sans-serif system fonts on other platforms.
+    pack: "system"
+
   layout:
     radius: "md"
     spacing: "spacious"
     avatar_shape: circle
+
   header:
     enable: true
     style: navbar
     sticky: true
     align: center
     search: true
-    theme_toggle: true
+    theme_toggle: false
     theme_picker: false
     language_switcher: false
     cta:
       enable: false
       text: ""
       url: ""
+
   footer:
     style: minimal
     language_switcher: false
     text: ""
+
   copyright:
     notice: "© {year} {name}"
     license:
@@ -45,6 +63,7 @@ hugoblox:
       allow_derivatives: false
       share_alike: false
       allow_commercial: false
+
   seo:
     title: "Ya Wen | Architecture, Digital Twins & AI"
     ai:
@@ -53,6 +72,7 @@ hugoblox:
       disallow: []
       note: "Public academic profile and research portfolio."
       contact: ""
+
   content:
     math:
       enable: false
@@ -62,6 +82,7 @@ hugoblox:
       enable: true
     citations:
       style: apa
+
   search:
     enable: true
     suggestions:
@@ -70,26 +91,33 @@ hugoblox:
       - Scan2Fire
       - BuildSPACE
     quick_actions: []
+
   comments:
     enable: false
     provider: ""
+
   analytics:
     google:
       measurement_id: ""
+
   repository:
     enable: false
     url: ""
     branch: main
     content_dir: content
+
   locale:
     date_format: "2 Jan 2006"
     time_format: "15:04"
     address_format: en-gb
+
   privacy:
     enable: false
     anonymize_analytics: true
+
   debug:
     enable: false
+
   pro:
     hide_attribution: false
     affiliate_code: ""

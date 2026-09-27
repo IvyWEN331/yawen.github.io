@@ -18,10 +18,11 @@ sections:
         interests: Research Interests
     design:
       background:
+        color: "#0b0d10"
         gradient_mesh:
-          enable: true
+          enable: false
       name:
-        size: md
+        size: sm
       avatar:
         size: medium
         shape: circle
@@ -86,7 +87,7 @@ sections:
       text: |-
         I welcome conversations around **architecture technology, Digital Twins, reality capture, semantic building information, AI for the built environment, and robotics-enabled building operation**.
 
-        Please use the email or professional links in the profile above. Replace the placeholder contact links before publishing the site.
+        Please use the professional links in the profile above.
     design:
       columns: '1'
 ---
