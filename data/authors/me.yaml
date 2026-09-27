@@ -1,15 +1,18 @@
 schema: hugoblox/author/v1
 slug: me
 is_owner: true
+
 name:
-  display: Ya Wen 文雅
+  display: Ya Wen
   given: Ya
   family: Wen
-  alternate: 文雅
+  alternate: 闻雅
   pronunciation: ''
   pronouns: she/her
+
 postnominals:
   - PhD
+
 status:
   icon: "🏛️"
 
@@ -19,18 +22,21 @@ bio: |
   I am a Research Associate at the University of Cambridge, working at the intersection of architecture, digital twins, reality capture, knowledge systems, and artificial intelligence for the built environment. My research focuses on how geometric, semantic, and operational information can be integrated into shared digital representations that support building design, operation, safety, and robotic collaboration.
 
 affiliations:
-  - name: Postdoc in the University of Cambridge Department of Engineering
+  - name: Postdoc
+  - name: University of Cambridge
+    url: https://www.cam.ac.uk/
+  - name: Department of Engineering
     url: https://www.eng.cam.ac.uk/
 
 links:
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/YOUR-LINKEDIN/
+    url: https://www.linkedin.com/in/ya-wen-b65a63115/
     label: LinkedIn
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/
+    url: https://scholar.google.co.uk/citations?user=R8T7x4YAAAAJ&hl=en
     label: Google Scholar
   - icon: academicons/orcid
-    url: https://orcid.org/
+    url: https://orcid.org/0000-0002-6372-2946
     label: ORCID
 
 interests:
@@ -42,20 +48,17 @@ interests:
   - Robotics and Human–Building Interaction
 
 education:
-  - degree: PhD in Real Estate & Construction / Building Information Modelling
+  - degree: PhD
     institution: The University of Hong Kong
-    start: 2019-09-01
-    end: 2023-07-31
-    summary: |
-      Research on construction safety knowledge, investment allocation, BIM, and decision-support methods.
-  - degree: MSc in Geospatial Engineering with BIM
+    year: Jan 2019 – Nov 2023
+
+  - degree: MSc in Geospatial Engineering with BIM · Degree with Distinction
     institution: University of Nottingham Ningbo China
-    start: 2016-09-01
-    end: 2017-09-30
+    year: Sep 2016 – Sep 2017
+
   - degree: BEng (Hons) in Architecture
     institution: University of Nottingham Ningbo China
-    start: 2012-09-01
-    end: 2016-07-31
+    year: Sep 2012 – Jul 2016
 
 experience:
   - role: Research Associate
@@ -63,6 +66,7 @@ experience:
     start: 2023-08-01
     summary: |
       Research on digital twins, reality capture, semantic enrichment, AI-enabled building information systems, and European collaborative research projects including BUILDSPACE.
+
   - role: Researcher / Project Manager
     org: Hong Kong
     start: 2019-01-01
@@ -81,6 +85,7 @@ skills:
         level: 4
       - label: AI / Computer Vision
         level: 4
+
   - name: Academic & Professional
     items:
       - label: Research Design
