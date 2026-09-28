@@ -14,6 +14,7 @@
   letter-spacing: -0.02em;
 }
 
+/* left profile spacing */
 .resume-biography .space-y-3 > :not([hidden]) ~ :not([hidden]) {
   margin-top: 0.28rem !important;
 }
@@ -29,31 +30,75 @@
 .resume-biography .space-y-3 p.text-lg.text-gray-600.dark\:text-gray-400 {
   line-height: 1.18 !important;
 }
-
 .resume-biography p {
   line-height: 1.45;
 }
 
-/* Credentials: visually remove the template's brackets and render two sizes smaller */
+/* credentials line: remove visible brackets and make smaller */
 .resume-biography .space-y-3 h1 + p {
   font-size: 0 !important;
   line-height: 1.25 !important;
   margin-top: 0.5rem !important;
-  max-width: 330px;
+  max-width: 340px;
 }
 .resume-biography .space-y-3 h1 + p::before {
   content: "Ph.D · B.Eng (Hons) Architecture · MSc (Distinction) · RIBA (Part I) · CCBC · GMInstCES";
   font-size: 0.78rem !important;
-  line-height: 1.45;
+  line-height: 1.48;
   font-weight: 400;
   color: rgb(156 163 175);
 }
 
-/* Education rows */
+/* reorder right column so Research Interests sits below Download CV */
+.resume-biography .md\:col-span-8 {
+  display: flex;
+  flex-direction: column;
+}
+.resume-biography .md\:col-span-8 > div:nth-child(1) { order: 1; }
+.resume-biography .md\:col-span-8 > div:nth-child(2) { order: 2; }
+.resume-biography .md\:col-span-8 > div:nth-child(3) { order: 4; }
+.resume-biography .md\:col-span-8 > div:nth-child(4) { order: 3; }
+
+/* make the Research Interests block lighter and more compact */
+.resume-biography .md\:col-span-8 > div:nth-child(4) {
+  margin-bottom: 3rem;
+}
+.resume-biography .md\:col-span-8 > div:nth-child(4) .flex.items-center.gap-4.mb-8 {
+  margin-bottom: 1rem !important;
+  gap: 0.8rem !important;
+}
+.resume-biography .md\:col-span-8 > div:nth-child(4) .w-12.h-12 {
+  width: 2.3rem !important;
+  height: 2.3rem !important;
+}
+.resume-biography .md\:col-span-8 > div:nth-child(4) h3 {
+  font-size: 1.05rem !important;
+}
+.resume-biography .md\:col-span-8 > div:nth-child(4) .flex.flex-wrap.gap-3 {
+  gap: 0.55rem !important;
+}
+.resume-biography .md\:col-span-8 > div:nth-child(4) .inline-block {
+  font-size: 0.82rem !important;
+  line-height: 1.35 !important;
+  padding: 0.44rem 0.78rem !important;
+  border-radius: 999px !important;
+  background: rgba(124, 131, 255, 0.10) !important;
+  color: rgb(219 224 255) !important;
+  border: 1px solid rgba(124, 131, 255, 0.28) !important;
+  box-shadow: none !important;
+}
+.resume-biography .md\:col-span-8 > div:nth-child(4) .inline-block:hover {
+  background: rgba(124, 131, 255, 0.16) !important;
+  color: rgb(239 241 255) !important;
+  border-color: rgba(124, 131, 255, 0.40) !important;
+}
+
+/* Education section: convert cards into horizontal rows */
 .resume-biography .grid:has(> .group) {
   display: block !important;
 }
 
+/* academic footprint map */
 .resume-biography .mb-16 > .grid:has(> .group)::before {
   content: "";
   display: block;
@@ -122,16 +167,129 @@
   white-space: pre-line;
 }
 
-/* Interactive Digital Twin modelling component */
-.dt-dimensions-frame {
-  display: block;
-  width: 100%;
-  height: 650px;
-  border: 0;
-  margin: 1.35rem 0 0;
-  border-radius: 18px;
+/* process-map style DT framework */
+.dt-process-map {
+  position: relative;
+  margin: 1.6rem 0 1rem;
+  padding: 1.9rem 1.4rem 1.2rem;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(124,131,255,0.04) 100%);
+  border: 1px solid rgba(148,163,184,0.16);
   overflow: hidden;
-  background: #0b0d10;
+}
+
+.dt-process-title {
+  text-align: center;
+  font-size: 1.38rem;
+  line-height: 1.2;
+  font-weight: 760;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.93);
+  margin-bottom: 1.9rem;
+}
+
+.dt-process-line {
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  top: 6.05rem;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.38), rgba(255,255,255,0.78), rgba(255,255,255,0.38));
+}
+
+.dt-process-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem 2rem;
+  align-items: start;
+}
+
+.dt-process-anchor {
+  position: relative;
+  padding-top: 1.1rem;
+  text-align: center;
+}
+
+.dt-process-index {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  width: 2.15rem;
+  height: 2.15rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 2px solid rgba(255,255,255,0.86);
+  background: #7c83ff;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.55rem;
+}
+
+.dt-process-heading {
+  max-width: 220px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.28;
+  font-weight: 700;
+  color: #f4f5f7;
+}
+
+.dt-process-track {
+  position: relative;
+  margin: 1rem auto 0;
+  max-width: 240px;
+  padding-top: 0.55rem;
+}
+.dt-process-track::before {
+  content: "";
+  position: absolute;
+  left: 0.32rem;
+  top: 0;
+  bottom: 0.35rem;
+  border-left: 2px dotted rgba(255,255,255,0.30);
+}
+
+.dt-process-node {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.82rem;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+.dt-process-node:last-child {
+  margin-bottom: 0;
+}
+
+.dt-dot {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 999px;
+  margin-top: 0.32rem;
+  background: #f0f2ff;
+  box-shadow: 0 0 0 4px rgba(124,131,255,0.16);
+}
+
+.dt-node-text strong {
+  display: block;
+  font-size: 0.98rem;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #f5f7fb;
+}
+.dt-node-text span {
+  display: block;
+  margin-top: 0.18rem;
+  font-size: 0.84rem;
+  line-height: 1.35;
+  color: rgba(226,231,239,0.78);
 }
 
 @media (max-width: 900px) {
@@ -147,8 +305,33 @@
     justify-self: start;
     white-space: pre-line;
   }
-  .dt-dimensions-frame {
-    height: 920px;
-    border-radius: 14px;
+
+  .dt-process-map {
+    padding: 1.4rem 1rem 1rem;
   }
+  .dt-process-title {
+    font-size: 1.1rem;
+    margin-bottom: 1.3rem;
+  }
+  .dt-process-line {
+    display: none;
+  }
+  .dt-process-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .dt-process-anchor {
+    text-align: left;
+    padding-top: 0;
+  }
+  .dt-process-heading {
+    max-width: none;
+    margin: 0;
+  }
+
+  /* keep order stable on mobile */
+  .resume-biography .md\:col-span-8 > div:nth-child(1) { order: 1; }
+  .resume-biography .md\:col-span-8 > div:nth-child(2) { order: 2; }
+  .resume-biography .md\:col-span-8 > div:nth-child(3) { order: 4; }
+  .resume-biography .md\:col-span-8 > div:nth-child(4) { order: 3; }
 }
