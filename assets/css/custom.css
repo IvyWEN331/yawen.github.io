@@ -14,6 +14,18 @@
   letter-spacing: -0.02em;
 }
 
+/* Keep only about 1–2 text lines after Education before Working Experience. */
+#profile .resume-biography {
+  padding-bottom: 1.25rem !important;
+}
+#work-experience {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+#work-experience .work-experience-native {
+  padding-top: 0.45rem !important;
+}
+
 /* left profile spacing */
 .resume-biography .space-y-3 > :not([hidden]) ~ :not([hidden]) {
   margin-top: 0.28rem !important;
@@ -155,7 +167,7 @@
   white-space: pre-line;
 }
 
-/* Native Working Experience — deliberately mirrors Education */
+/* Native Working Experience — mirrors Education */
 .work-experience-native {
   background: transparent;
 }
@@ -219,6 +231,12 @@
   text-decoration: none;
   border-bottom: 1px solid rgba(156, 162, 255, 0.35);
 }
+/* Add a visible bullet immediately before each project/detail link. */
+.work-exp-highlights a::before {
+  content: "• ";
+  color: rgb(156 162 255);
+  font-weight: 700;
+}
 .work-exp-highlights a:hover {
   color: rgb(199 202 255);
   border-bottom-color: rgb(199 202 255);
@@ -239,6 +257,10 @@
 }
 
 @media (max-width: 900px) {
+  #profile .resume-biography {
+    padding-bottom: 1rem !important;
+  }
+
   .resume-biography .grid:has(> .group) > .group > .flex > .flex-1 {
     grid-template-columns: 1fr;
     gap: 0.35rem;
@@ -262,12 +284,6 @@
   .work-exp-highlights {
     grid-column: 1;
     justify-self: start;
-  }
-  .work-exp-date {
-    grid-row: auto;
-  }
-  .work-exp-highlights {
-    margin-top: 0.55rem;
   }
 
   #research img[alt="Digital Twin modelling framework"] {

@@ -6,6 +6,7 @@ type: landing
 
 sections:
   - block: resume-biography-3
+    id: profile
     content:
       username: me
       text: |-
@@ -30,6 +31,7 @@ sections:
         shape: circle
 
   - block: work-experience
+    id: work-experience
     content:
       username: me
 
