@@ -1,7 +1,6 @@
 
 /* Ya Wen homepage refinements */
 
-/* Add Chinese name on its own line */
 .resume-biography h1::after {
   content: "闻雅";
   display: block;
@@ -16,20 +15,46 @@
   letter-spacing: -0.02em;
 }
 
-/* Make the summary/credential area a little tighter */
-.resume-biography p {
-  line-height: 1.45;
+/* Tighten the whole left profile stack a little */
+.resume-biography .space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  margin-top: 0.28rem !important;
+}
+.resume-biography .space-y-3 p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.resume-biography .space-y-3 p.text-lg.text-gray-700,
+.resume-biography .space-y-3 p.text-lg.text-gray-700 a,
+.resume-biography .space-y-3 p.text-lg.text-gray-700.dark\:text-gray-300,
+.resume-biography .space-y-3 p.text-lg.text-gray-700.dark\:text-gray-300 a,
+.resume-biography .space-y-3 p.text-lg.text-gray-600,
+.resume-biography .space-y-3 p.text-lg.text-gray-600.dark\:text-gray-400 {
+  line-height: 1.18 !important;
 }
 
-/* Make the line under the name slightly tighter and more academic */
-.resume-biography [class*="pronoun"],
-.resume-biography [class*="Pronoun"] {
-  line-height: 1.25 !important;
+.resume-biography p {
+  line-height: 1.45;
 }
 
 /* Education section: convert cards into horizontal rows */
 .resume-biography .grid:has(> .group) {
   display: block !important;
+}
+
+/* Insert the map between the Education heading and the education rows */
+.resume-biography .mb-16 > .grid:has(> .group)::before {
+  content: "";
+  display: block;
+  width: 100%;
+  aspect-ratio: 960 / 340;
+  background-image: url('/yawen.github.io/media/academic-footprint.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 0 1.35rem 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
 .resume-biography .grid:has(> .group) > .group {
@@ -93,16 +118,6 @@
   line-height: 1.45;
 }
 
-/* Style the footprint image */
-.resume-biography img[alt="Academic footprint"] {
-  display: block;
-  width: 100%;
-  max-width: 820px;
-  margin: 1.1rem auto 0.6rem auto;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-}
-
 @media (max-width: 900px) {
   .resume-biography .grid:has(> .group) > .group > .flex > .flex-1 {
     grid-template-columns: 1fr;
@@ -116,5 +131,9 @@
     grid-row: auto;
     justify-self: start;
     white-space: normal;
+  }
+
+  .resume-biography .mb-16 > .grid:has(> .group)::before {
+    border-radius: 12px;
   }
 }
