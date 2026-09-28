@@ -53,10 +53,14 @@ sections:
     id: projects
     content:
       title: Selected Projects
-      text: Research projects connecting architecture, digital twins, sensing, semantics, and intelligent building operation.
+      text: Selected research projects spanning Digital Twin construction, semantic enrichment, and knowledge-driven building operations.
       filters:
         folders:
           - projects
+        featured_only: true
+      sort_by: project_order
+      sort_ascending: true
+      count: 3
     design:
       view: article-grid
       fill_image: false

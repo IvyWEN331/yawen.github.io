@@ -1,15 +1,26 @@
 ---
-title: Scan2Fire — Semantic Fire-Safety Inspection
-date: 2026-01-01
-summary: A knowledge-graph- and ontology-driven multi-agent workflow for fire-safety asset inspection from reality-capture and building information.
+title: "Scan2Fire – Rapid and Cost-efficient Modelling of Digital Firefighting Assets"
+date: 2026-09-01
+featured: true
+project_order: 1
+summary: "A reality-capture-driven workflow for rapid semantic enrichment of firefighting assets, integrating RGB imagery, LiDAR and thermal sensing, and IoT data to support safer and more resilient building Digital Twins."
 tags:
-  - Fire Safety
-  - Ontology
-  - Knowledge Graph
-  - Multi-Agent Systems
+  - Digital Twin
   - Scan-to-BIM
+  - Fire Safety
+  - Reality Capture
+  - Computer Vision
 ---
 
-Scan2Fire investigates how fire-safety inspection can be supported by a **shared semantic digital world** connecting captured building evidence, IFC/BIM information, fire assets, geometric reasoning, and rule-based coordination.
+Scan2Fire investigates how **reality-capture and surveying technologies can enrich Digital Twins with detailed firefighting-asset information**. The workflow brings together RGB imagery, LiDAR point clouds, thermal information, and IoT sensor data to create richer digital representations of the physical environment.
 
-The current system direction uses a **knowledge-graph/ontology-driven multi-agent architecture without LLMs**. Specialised agents coordinate through shared semantic information and deterministic geometric/IFC algorithms, making the workflow traceable and suitable for safety-critical inspection scenarios.
+A key outcome of this work is the **Fire-ART Dataset**, a dedicated building fire-assets dataset developed to support automated recognition, localisation, and semantic enrichment of firefighting assets. The work contributes to more rapid and cost-efficient Digital Twin modelling while supporting building safety and resilience management.
+
+### Key highlights
+
+- Reality capture using RGB imagery, LiDAR, thermal information, and sensor data.
+- Automated detection and semantic enrichment of firefighting assets.
+- Development of the **Fire-ART Dataset** for building fire-safety applications.
+- Supports Digital Twin-based safety inspection and resilience management.
+
+**Dataset:** [Fire-ART Dataset on Zenodo](https://zenodo.org/records/17102363)
