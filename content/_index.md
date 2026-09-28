@@ -29,15 +29,9 @@ sections:
         size: medium
         shape: circle
 
-  - block: markdown
-    id: work-experience
+  - block: work-experience
     content:
-      title: ''
-      subtitle: ''
-      text: |-
-        <iframe class="work-experience-frame" src="widgets/working-experience.html" title="Working Experience" loading="lazy"></iframe>
-    design:
-      columns: '1'
+      username: me
 
   - block: markdown
     id: research

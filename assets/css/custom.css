@@ -155,25 +155,73 @@
   white-space: pre-line;
 }
 
-/* Working Experience:
-   break the iframe out of Hugo's narrow prose column, same width language as the main CV area. */
-#work-experience .prose,
-#work-experience .prose-lg {
-  max-width: none !important;
-  width: 100% !important;
+/* Native Working Experience — deliberately mirrors Education */
+.work-experience-native {
+  background: transparent;
 }
-
-.work-experience-frame {
-  display: block;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  width: min(1050px, calc(100vw - 72px)) !important;
-  max-width: none !important;
-  height: 735px;
-  margin: 0 auto !important;
-  border: 0 !important;
-  background: #0b0d10;
+.work-exp-list {
+  width: 100%;
+}
+.work-exp-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 1.25fr) minmax(280px, 1.45fr) auto;
+  align-items: start;
+  gap: 0.45rem 1.25rem;
+  padding: 1.05rem 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.24);
+}
+.work-exp-row:last-child {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.24);
+}
+.work-exp-role {
+  grid-column: 1;
+  font-size: 1.02rem;
+  font-weight: 650;
+  line-height: 1.42;
+  color: rgb(249 250 251);
+}
+.work-exp-org {
+  grid-column: 2;
+  font-size: 0.98rem;
+  line-height: 1.45;
+  color: rgb(209 213 219);
+}
+.work-exp-location {
+  margin-top: 0.18rem;
+  font-size: 0.84rem;
+  color: rgb(156 163 175);
+}
+.work-exp-date {
+  grid-column: 3;
+  justify-self: end;
+  white-space: nowrap;
+  font-size: 0.94rem;
+  line-height: 1.45;
+  color: rgb(156 163 175);
+}
+.work-exp-highlights {
+  grid-column: 1 / -1;
+  margin-top: 0.55rem;
+  color: rgb(176 183 194);
+}
+.work-exp-highlights ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.28rem;
+}
+.work-exp-highlights li {
+  font-size: 0.84rem;
+  line-height: 1.42;
+}
+.work-exp-highlights a {
+  color: rgb(156 162 255);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(156, 162, 255, 0.35);
+}
+.work-exp-highlights a:hover {
+  color: rgb(199 202 255);
+  border-bottom-color: rgb(199 202 255);
 }
 
 /* Digital Twin uploaded figure */
@@ -204,9 +252,22 @@
     white-space: pre-line;
   }
 
-  .work-experience-frame {
-    width: calc(100vw - 24px) !important;
-    height: 1160px;
+  .work-exp-row {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+  .work-exp-role,
+  .work-exp-org,
+  .work-exp-date,
+  .work-exp-highlights {
+    grid-column: 1;
+    justify-self: start;
+  }
+  .work-exp-date {
+    grid-row: auto;
+  }
+  .work-exp-highlights {
+    margin-top: 0.55rem;
   }
 
   #research img[alt="Digital Twin modelling framework"] {

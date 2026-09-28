@@ -1,0 +1,99 @@
+{{/* Native Working Experience block styled to match Education */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $content := $block.content }}
+{{ if not (reflect.IsMap $content) }}{{ $content = dict }}{{ end }}
+
+{{ $username := "me" }}
+{{ with index $content "username" }}{{ $username = strings.TrimSpace (printf "%v" .) }}{{ end }}
+{{ $profile := partial "functions/get_author_profile" $username }}
+
+{{ $experience_raw := $profile.experience }}
+{{ $experience := slice }}
+{{ if reflect.IsSlice $experience_raw }}
+  {{ $experience = $experience_raw }}
+{{ else if and $experience_raw (reflect.IsMap $experience_raw) }}
+  {{ $experience = slice $experience_raw }}
+{{ end }}
+
+<div class="work-experience-native py-2 px-4 sm:px-4">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-start">
+      <div class="hidden md:block md:col-span-4"></div>
+
+      <div class="md:col-span-8">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
+            {{ partial "functions/get_icon" (dict "name" "briefcase" "attributes" "class='w-6 h-6 text-primary-600 dark:text-primary-400'") }}
+          </div>
+          <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">Working Experience</h3>
+        </div>
+
+        <div class="work-exp-list">
+          {{ range $experience }}
+            {{ if reflect.IsMap . }}
+              {{ $role := "" }}
+              {{ $org := "" }}
+              {{ $start := "" }}
+              {{ $end := "" }}
+              {{ $location := "" }}
+              {{ $highlights := slice }}
+
+              {{ with index . "role" }}{{ $role = strings.TrimSpace (printf "%v" .) }}{{ end }}
+              {{ with index . "org" }}{{ $org = strings.TrimSpace (printf "%v" .) }}{{ end }}
+              {{ with index . "start" }}{{ $start = strings.TrimSpace (printf "%v" .) }}{{ end }}
+              {{ with index . "end" }}{{ $end = strings.TrimSpace (printf "%v" .) }}{{ end }}
+              {{ with index . "location" }}{{ $location = strings.TrimSpace (printf "%v" .) }}{{ end }}
+
+              {{ $highlights_raw := index . "highlights" }}
+              {{ if reflect.IsSlice $highlights_raw }}
+                {{ $highlights = $highlights_raw }}
+              {{ end }}
+
+              <article class="work-exp-row">
+                <div class="work-exp-role">{{ $role }}</div>
+
+                <div class="work-exp-org">
+                  <div>{{ $org }}</div>
+                  {{ if $location }}<div class="work-exp-location">{{ $location }}</div>{{ end }}
+                </div>
+
+                <div class="work-exp-date">
+                  {{ if $start }}
+                    {{ $parsedStart := try (time $start) }}
+                    {{ if not $parsedStart.Err }}
+                      {{ $parsedStart.Value | time.Format "Jan 2006" }}
+                    {{ else }}
+                      {{ $start }}
+                    {{ end }}
+                  {{ end }}
+                  –
+                  {{ if $end }}
+                    {{ $parsedEnd := try (time $end) }}
+                    {{ if not $parsedEnd.Err }}
+                      {{ $parsedEnd.Value | time.Format "Jan 2006" }}
+                    {{ else }}
+                      {{ $end }}
+                    {{ end }}
+                  {{ else }}
+                    Present
+                  {{ end }}
+                </div>
+
+                {{ if gt (len $highlights) 0 }}
+                  <div class="work-exp-highlights">
+                    <ul>
+                      {{ range $highlights }}
+                        <li>{{ printf "%v" . | markdownify }}</li>
+                      {{ end }}
+                    </ul>
+                  </div>
+                {{ end }}
+              </article>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

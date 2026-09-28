@@ -73,35 +73,51 @@ experience:
   - role: Postdoc Research Associate in Department of Engineering
     org: University of Cambridge
     start: 2023-08-01
+    location: Cambridge, UK
+    highlights:
+      - Lead the Digital Twin Construction task from building level to city level-built asset for smart city purpose in BuildSpace Project ([details](https://experience.arcgis.com/experience/54fd0c0449444ffcb5af40cb7dd5e6b2/page/Service-1-%26-2/)).
+      - Participate in the AEGIR and MATBS project on digital infrastructure development for enhanced operational flexibility and sustainability.
+      - Collaborate partnerships with 13 EU organisations.
+      - Contribute to major grant proposal submissions.
     summary: |
       **Location:** Cambridge, UK
 
-      - Lead the Digital Twin Construction task from building-level to city-level built assets for smart-city applications in the BUILDSPACE project.
-      - Participate in the AEGIR and MATBS projects on digital infrastructure development for enhanced operational flexibility and sustainability.
-      - Collaborate with 13 EU organisations.
+      - Lead the Digital Twin Construction task from building level to city level-built asset for smart city purpose in BuildSpace Project ([details](https://experience.arcgis.com/experience/54fd0c0449444ffcb5af40cb7dd5e6b2/page/Service-1-%26-2/)).
+      - Participate in the AEGIR and MATBS project on digital infrastructure development for enhanced operational flexibility and sustainability.
+      - Collaborate partnerships with 13 EU organisations.
       - Contribute to major grant proposal submissions.
 
   - role: Project Manager and Senior Researcher
     org: Llewellyn and Partners Co. Ltd. (LPC) – HKU spin-out company
     start: 2019-09-01
     end: 2022-08-31
+    location: Hong Kong SAR, China
+    highlights:
+      - Managed the construction project in EMSD and supported the digital transformation services for EMSD through designing and developing a Digital Twin / CDE platform for BIM automation ([details](https://inno.emsd.gov.hk/en/it-solutions/index_id_284.html)).
+      - Led the development team for Smart Asset Platform – AutoCDE ([details](https://www.llewellynandpartners.com/autocde-1)).
+      - Designed, conducted and delivered the CIC-accredited BIM Manager course for the Hong Kong industry ([details](https://www.arch.hku.hk/event_/global-bim-manager-professional-training/)).
     summary: |
       **Location:** Hong Kong SAR, China
 
-      - Managed an EMSD construction project and supported digital transformation through the design and development of a Digital Twin / Common Data Environment platform for BIM automation.
-      - Led the development team for the Smart Asset Platform – AutoCDE.
-      - Designed, conducted, and delivered a CIC-accredited BIM Manager course for the Hong Kong industry.
+      - Managed the construction project in EMSD and supported the digital transformation services for EMSD through designing and developing a Digital Twin / CDE platform for BIM automation ([details](https://inno.emsd.gov.hk/en/it-solutions/index_id_284.html)).
+      - Led the development team for Smart Asset Platform – AutoCDE ([details](https://www.llewellynandpartners.com/autocde-1)).
+      - Designed, conducted and delivered the CIC-accredited BIM Manager course for the Hong Kong industry ([details](https://www.arch.hku.hk/event_/global-bim-manager-professional-training/)).
 
   - role: Architecture Intern
     org: China Northeast Architecture Design and Research Institute
     start: 2015-07-01
     end: 2015-08-31
+    location: Liaoning, China
+    highlights:
+      - Assisted in the analysis and integration of safety-compliance requirements into factory design.
+      - Worked with MEP engineers to optimise the industrial process flow and functional layout.
+      - 3D and 4D BIM modelling for Ansteel Group Co., Ltd. in Liaoning.
     summary: |
       **Location:** Liaoning, China
 
       - Assisted in the analysis and integration of safety-compliance requirements into factory design.
-      - Worked with MEP engineers to optimise industrial process flow and functional layout.
-      - Conducted 3D and 4D BIM modelling for Ansteel Group Co., Ltd. in Liaoning.
+      - Worked with MEP engineers to optimise the industrial process flow and functional layout.
+      - 3D and 4D BIM modelling for Ansteel Group Co., Ltd. in Liaoning.
 
 skills:
   - name: Research & Digital Built Environment
