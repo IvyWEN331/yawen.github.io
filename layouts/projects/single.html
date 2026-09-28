@@ -2,9 +2,7 @@
 <div class="project-page">
   <div class="project-page-inner">
 
-    <a class="project-back-link" href="{{ "/projects/" | relLangURL }}">
-      ← Projects
-    </a>
+    <a class="project-back-link" href="{{ "/projects/" | relLangURL }}">← Projects</a>
 
     <header class="project-header">
       <h1>{{ .Title }}</h1>
@@ -13,9 +11,20 @@
       {{ end }}
     </header>
 
-    {{ with .Resources.GetMatch "featured*" }}
+    {{ $detail := .Resources.GetMatch "project-detail*" }}
+    {{ if not $detail }}
+      {{ $detail = .Resources.GetMatch "featured*" }}
+    {{ end }}
+
+    {{ with $detail }}
       <figure class="project-featured">
-        <img src="{{ .RelPermalink }}" alt="{{ $.Title }}">
+        <img
+          src="{{ .RelPermalink }}"
+          width="{{ .Width }}"
+          height="{{ .Height }}"
+          alt="{{ $.Title }}"
+          decoding="async"
+        >
       </figure>
     {{ end }}
 

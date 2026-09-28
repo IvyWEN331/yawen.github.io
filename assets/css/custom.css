@@ -543,3 +543,64 @@
   }
 }
 /* PATCH 16 END */
+
+/* PATCH 17 START */
+/* PATCH 17 — project images: smaller display, original PNG resolution */
+
+/*
+  Important:
+  Project detail images are rendered directly from project-detail.png.
+  No Hugo .Fit/.Fill/.Process is used.
+*/
+.project-featured {
+  width: 100% !important;
+  margin: 1.6rem 0 2.1rem !important;
+  text-align: center;
+}
+
+.project-featured img {
+  display: inline-block !important;
+  width: auto !important;
+  height: auto !important;
+
+  /* Display large source images smaller for better apparent sharpness.
+     Small images (e.g. Scan2Fire 612px) are NOT enlarged. */
+  max-width: min(760px, 100%) !important;
+  max-height: none !important;
+
+  object-fit: contain !important;
+  border-radius: 10px !important;
+  background: transparent !important;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.24) !important;
+}
+
+/* BUILDSPACE homepage thumbnail is intentionally a small landscape image.
+   Keep it contained rather than stretching/cropping it. */
+#projects img[alt*="BUILDSPACE"],
+#projects img[alt*="BuildSpace"],
+#projects img[alt*="Buildspace"] {
+  object-fit: contain !important;
+  background: #0b0d10 !important;
+}
+
+/* Homepage Publications remain compact */
+#papers .prose,
+#papers .prose-lg,
+#papers ol {
+  font-size: 0.86rem !important;
+  line-height: 1.55 !important;
+}
+
+@media (max-width: 760px) {
+  .project-featured img {
+    max-width: 100% !important;
+    border-radius: 8px !important;
+  }
+
+  #papers .prose,
+  #papers .prose-lg,
+  #papers ol {
+    font-size: 0.80rem !important;
+  }
+}
+/* PATCH 17 END */
