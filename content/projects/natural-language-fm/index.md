@@ -26,3 +26,7 @@ A real-building case study demonstrates how the system can retrieve **asset-spec
 - Integration of BMS energy and performance data.
 - Natural-language interaction for maintenance and operational queries.
 - Demonstrated through a real-building case study.
+
+### Publication
+
+1. **Wen, Y.**, Luo P., Lu L., Kokalani S., Parn E., Silva L. and Brilakis I. (2026). LLM-Built Knowledge Graphs for Natural Language Interaction in Facility Management. *I3CE 2026 ASCE International Conference on Computing in Civil Engineering*, June 14–17, 2025.
