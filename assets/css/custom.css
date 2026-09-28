@@ -291,3 +291,31 @@
     border-radius: 8px;
   }
 }
+
+/* PATCH 12 START */
+/* Working Experience text emphasis refinement */
+
+/* Position */
+.work-exp-role {
+  font-weight: 700 !important;
+  color: #ffffff !important;
+}
+
+/* Employer */
+.work-exp-org {
+  font-weight: 700 !important;
+  color: #ffffff !important;
+}
+
+/* Period */
+.work-exp-date {
+  font-weight: 700 !important;
+  color: #ffffff !important;
+}
+
+/* Location: white, but NOT bold */
+.work-exp-location {
+  font-weight: 400 !important;
+  color: #ffffff !important;
+}
+/* PATCH 12 END */
