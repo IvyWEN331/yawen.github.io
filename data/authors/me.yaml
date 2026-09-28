@@ -62,7 +62,9 @@ education:
     year: Sep 2016 – Sep 2017
 
   - degree: BEng (Hons) in Architecture
-    institution: University of Nottingham Ningbo China · The University of Nottingham, UK (Exchange Programme, awarded to top 10% of students)
+    institution: |-
+      University of Nottingham Ningbo China
+      The University of Nottingham, UK (Exchange Programme, awarded to top 10% of students)
     year: Sep 2012 – Jul 2016
 
 experience:

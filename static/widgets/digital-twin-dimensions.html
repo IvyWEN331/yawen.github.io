@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Digital Twin Modelling — Three Dimensions</title>
+<style>
+:root{--bg:#0b0d10;--panel:#11151b;--muted:#98a2b3;--text:#f3f4f6;--accent:#7c83ff;--accent-soft:rgba(124,131,255,.14);--accent-border:rgba(124,131,255,.48)}
+*{box-sizing:border-box} html,body{margin:0;background:transparent;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Inter,Arial,sans-serif} body{padding:18px}
+.shell{border:1px solid rgba(148,163,184,.18);border-radius:18px;background:linear-gradient(180deg,#10141a 0%,#0b0d10 100%);padding:22px;min-height:610px}
+.intro{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:22px}.eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:#8b93a3;margin-bottom:6px}
+h1{font-size:20px;margin:0;font-weight:680;letter-spacing:-.02em}.hint{font-size:12px;color:var(--muted);margin:0;text-align:right}
+.lanes{display:grid;gap:14px}.lane{border:1px solid rgba(148,163,184,.14);border-radius:14px;background:rgba(255,255,255,.018);padding:16px}.lane-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.num{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);border:1px solid var(--accent-border);color:#cfd2ff;font-size:12px;font-weight:700;flex:0 0 auto}.lane-title{font-size:15px;font-weight:650}
+.track{display:flex;align-items:stretch;gap:8px;overflow-x:auto;padding-bottom:4px}.stage{user-select:text;-webkit-user-select:text;appearance:none;border:1px solid rgba(148,163,184,.2);background:#121720;color:var(--text);border-radius:11px;padding:12px 13px;min-width:146px;flex:1 1 0;text-align:left;cursor:pointer;transition:.18s ease}
+.stage:hover,.stage:focus{outline:none;border-color:var(--accent-border);background:#151b27;transform:translateY(-1px)}.stage.active{border-color:var(--accent);background:var(--accent-soft);box-shadow:0 0 0 1px rgba(124,131,255,.15) inset}
+.stage strong{display:block;font-size:13px;font-weight:650;line-height:1.25}.stage small{display:block;margin-top:5px;color:var(--muted);font-size:10.5px;line-height:1.25}.arrow{display:grid;place-items:center;color:#626b7a;font-size:18px;flex:0 0 16px}
+.detail{margin-top:18px;border-top:1px solid rgba(148,163,184,.16);padding-top:16px;min-height:92px}.detail-label{font-size:11px;color:#8b93a3;text-transform:uppercase;letter-spacing:.12em;margin-bottom:5px}.detail-title{font-size:17px;font-weight:670;margin-bottom:5px}.detail-text{font-size:13px;line-height:1.55;color:#c3c8d1;max-width:850px}
+@media(max-width:720px){body{padding:10px}.shell{padding:16px;min-height:880px}.intro{display:block}.hint{text-align:left;margin-top:7px}.lane{padding:13px}.track{display:grid;grid-template-columns:1fr}.arrow{transform:rotate(90deg);height:12px}.stage{min-width:0;width:100%}}
+</style>
+</head>
+<body>
+<main class="shell">
+  <div class="intro">
+    <div><div class="eyebrow">A conceptual framework</div><h1>Digital Twin Modelling — Three Dimensions</h1></div>
+    <p class="hint">Select any concept to explore it.</p>
+  </div>
+  <section class="lanes">
+    <div class="lane">
+      <div class="lane-head"><span class="num">01</span><span class="lane-title">Maturity of Digital Twin</span></div>
+      <div class="track">
+        <button class="stage active" data-title="Geometric Modelling" data-text="Physical capture establishes a geometric representation of the asset: its form, location, spatial configuration, and measurable physical state."><strong>Geometric Modelling</strong><small>Physical capture</small></button>
+        <div class="arrow">→</div>
+        <button class="stage" data-title="Semantic Modelling" data-text="Information enrichment and retrieval connect geometry to explicit meaning: objects, attributes, relationships, requirements, and operational context."><strong>Semantic Modelling</strong><small>Information enrichment & retrieval</small></button>
+        <div class="arrow">→</div>
+        <button class="stage" data-title="Value-based Modelling" data-text="Knowledge generation moves the model toward purposeful use: reasoning, decision support, service delivery, optimisation, and measurable value across the asset lifecycle."><strong>Value-based Modelling</strong><small>Knowledge generation</small></button>
+      </div>
+    </div>
+
+    <div class="lane">
+      <div class="lane-head"><span class="num">02</span><span class="lane-title">Scope of Digital Twin</span></div>
+      <div class="track">
+        <button class="stage" data-title="Component" data-text="The smallest modelled unit: an asset, element, equipment item, or component with its own geometry, state, and semantics."><strong>Component</strong><small>Asset level</small></button>
+        <div class="arrow">→</div>
+        <button class="stage" data-title="Building" data-text="Components are integrated as a building system, where spatial, functional, and operational relationships become essential."><strong>Building</strong><small>Building system</small></button>
+        <div class="arrow">→</div>
+        <button class="stage" data-title="City" data-text="Buildings connect to infrastructure, communities, mobility, and urban services, expanding the digital twin beyond a single asset."><strong>City</strong><small>Infrastructure & community</small></button>
+        <div class="arrow">→</div>
+        <button class="stage" data-title="Urban System" data-text="Across cities, interconnected data and models support broader urban-system understanding, comparison, coordination, and policy or service decisions."><strong>Urban System</strong><small>Across cities</small></button>
+      </div>
+    </div>
+
+    <div class="lane">
+      <div class="lane-head"><span class="num">03</span><span class="lane-title">Temporal Dimension</span></div>
+      <div class="track">
+        <button class="stage" data-title="Historical Evidence" data-text="Past observations and historical data provide the evidence required to understand change, behaviour, degradation, and performance over time."><strong>Historical Evidence</strong><small>History data study</small></button>
+        <div class="arrow">→</div>
+        <button class="stage" data-title="Present" data-text="The present state represents what is currently known about the physical asset and provides the operational reference point for monitoring and assessment."><strong>Present</strong><small>Current state</small></button>
+        <div class="arrow">→</div>
+        <button class="stage" data-title="Future" data-text="Decision-making and performance modelling use the current and historical state to explore interventions, future scenarios, and anticipated outcomes."><strong>Future</strong><small>Decision-making & performance modelling</small></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="detail" aria-live="polite">
+    <div class="detail-label">Selected concept</div>
+    <div class="detail-title" id="detail-title">Geometric Modelling</div>
+    <div class="detail-text" id="detail-text">Physical capture establishes a geometric representation of the asset: its form, location, spatial configuration, and measurable physical state.</div>
+  </section>
+</main>
+<script>
+const stages=[...document.querySelectorAll('.stage')];
+const title=document.getElementById('detail-title');
+const text=document.getElementById('detail-text');
+function selectStage(el){stages.forEach(x=>x.classList.remove('active'));el.classList.add('active');title.textContent=el.dataset.title;text.textContent=el.dataset.text}
+stages.forEach(el=>{el.addEventListener('click',()=>selectStage(el));el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectStage(el)}})});
+</script>
+</body>
+</html>

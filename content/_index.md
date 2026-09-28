@@ -39,6 +39,12 @@ sections:
         My research explores how **physical buildings and digital representations can remain connected across the building lifecycle**. I work across architecture, BIM/GIS, reality capture, Digital Twins, semantic knowledge representation, and AI-enabled decision support.
 
         A central theme is moving from a Digital Twin as a geometric model toward a **shared semantic world model** that can support people, building systems, and heterogeneous embodied agents. Current interests include Scan-to-BIM, ontology- and knowledge-graph-driven reasoning, multi-agent coordination, fire-safety inspection, and the use of digital building information to support operation and maintenance.
+
+        ### Digital Twin Modelling: Three Dimensions
+
+        I conceptualise Digital Twin modelling through three complementary dimensions: **maturity**, **scope**, and **time**. Select a concept below to explore how each dimension develops.
+
+        <iframe class="dt-dimensions-frame" src="widgets/digital-twin-dimensions.html" title="Interactive Digital Twin modelling dimensions" loading="lazy"></iframe>
     design:
       columns: '1'
 

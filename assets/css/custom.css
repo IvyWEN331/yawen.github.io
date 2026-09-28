@@ -1,4 +1,3 @@
-
 /* Ya Wen homepage refinements */
 
 .resume-biography h1::after {
@@ -15,7 +14,6 @@
   letter-spacing: -0.02em;
 }
 
-/* Tighten the whole left profile stack a little */
 .resume-biography .space-y-3 > :not([hidden]) ~ :not([hidden]) {
   margin-top: 0.28rem !important;
 }
@@ -36,12 +34,26 @@
   line-height: 1.45;
 }
 
-/* Education section: convert cards into horizontal rows */
+/* Credentials: visually remove the template's brackets and render two sizes smaller */
+.resume-biography .space-y-3 h1 + p {
+  font-size: 0 !important;
+  line-height: 1.25 !important;
+  margin-top: 0.5rem !important;
+  max-width: 330px;
+}
+.resume-biography .space-y-3 h1 + p::before {
+  content: "Ph.D · B.Eng (Hons) Architecture · MSc (Distinction) · RIBA (Part I) · CCBC · GMInstCES";
+  font-size: 0.78rem !important;
+  line-height: 1.45;
+  font-weight: 400;
+  color: rgb(156 163 175);
+}
+
+/* Education rows */
 .resume-biography .grid:has(> .group) {
   display: block !important;
 }
 
-/* Insert the map between the Education heading and the education rows */
 .resume-biography .mb-16 > .grid:has(> .group)::before {
   content: "";
   display: block;
@@ -53,7 +65,6 @@
   background-repeat: no-repeat;
   margin: 0 0 1.35rem 0;
   border-radius: 16px;
-  overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
 }
 
@@ -69,21 +80,17 @@
   backdrop-filter: none !important;
   transform: none !important;
 }
-
 .resume-biography .grid:has(> .group) > .group:last-child {
   border-bottom: 1px solid rgba(148, 163, 184, 0.24) !important;
 }
-
 .resume-biography .grid:has(> .group) > .group:hover {
   background: transparent !important;
   box-shadow: none !important;
   transform: none !important;
 }
-
 .resume-biography .grid:has(> .group) > .group > .flex > .flex-shrink-0 {
   display: none !important;
 }
-
 .resume-biography .grid:has(> .group) > .group > .flex > .flex-1 {
   display: grid !important;
   grid-template-columns: minmax(220px, 1.25fr) minmax(280px, 1.45fr) auto;
@@ -91,18 +98,15 @@
   gap: 0.4rem 1.25rem;
   width: 100%;
 }
-
 .resume-biography .grid:has(> .group) > .group > .flex > .flex-1 > p {
   margin: 0 !important;
 }
-
 .resume-biography .grid:has(> .group) > .group > .flex > .flex-1 > p:nth-child(1) {
   grid-column: 1;
   font-size: 1.02rem !important;
   font-weight: 650 !important;
   line-height: 1.42;
 }
-
 .resume-biography .grid:has(> .group) > .group > .flex > .flex-1 > p:nth-child(2) {
   grid-column: 3;
   grid-row: 1;
@@ -110,12 +114,24 @@
   white-space: nowrap;
   font-size: 0.94rem !important;
 }
-
 .resume-biography .grid:has(> .group) > .group > .flex > .flex-1 > p:nth-child(3) {
   grid-column: 2;
   grid-row: 1;
   font-size: 0.98rem !important;
   line-height: 1.45;
+  white-space: pre-line;
+}
+
+/* Interactive Digital Twin modelling component */
+.dt-dimensions-frame {
+  display: block;
+  width: 100%;
+  height: 650px;
+  border: 0;
+  margin: 1.35rem 0 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #0b0d10;
 }
 
 @media (max-width: 900px) {
@@ -123,17 +139,16 @@
     grid-template-columns: 1fr;
     gap: 0.35rem;
   }
-
   .resume-biography .grid:has(> .group) > .group > .flex > .flex-1 > p:nth-child(1),
   .resume-biography .grid:has(> .group) > .group > .flex > .flex-1 > p:nth-child(2),
   .resume-biography .grid:has(> .group) > .group > .flex > .flex-1 > p:nth-child(3) {
     grid-column: 1;
     grid-row: auto;
     justify-self: start;
-    white-space: normal;
+    white-space: pre-line;
   }
-
-  .resume-biography .mb-16 > .grid:has(> .group)::before {
-    border-radius: 12px;
+  .dt-dimensions-frame {
+    height: 920px;
+    border-radius: 14px;
   }
 }
