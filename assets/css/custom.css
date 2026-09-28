@@ -34,7 +34,7 @@
   line-height: 1.45;
 }
 
-/* credentials line: visually remove template brackets and make smaller */
+/* credentials line */
 .resume-biography .space-y-3 h1 + p {
   font-size: 0 !important;
   line-height: 1.25 !important;
@@ -49,7 +49,7 @@
   color: rgb(156 163 175);
 }
 
-/* No CV button: order is Bio -> Research Interests -> Education */
+/* Bio -> Research Interests -> Education */
 .resume-biography .md\:col-span-8 {
   display: flex;
   flex-direction: column;
@@ -86,13 +86,8 @@
   border: 1px solid rgba(124, 131, 255, 0.28) !important;
   box-shadow: none !important;
 }
-.resume-biography .md\:col-span-8 > div:nth-child(3) .inline-block:hover {
-  background: rgba(124, 131, 255, 0.16) !important;
-  color: rgb(239 241 255) !important;
-  border-color: rgba(124, 131, 255, 0.40) !important;
-}
 
-/* Education: horizontal rows */
+/* Education horizontal rows */
 .resume-biography .grid:has(> .group) {
   display: block !important;
 }
@@ -125,11 +120,6 @@
 }
 .resume-biography .grid:has(> .group) > .group:last-child {
   border-bottom: 1px solid rgba(148, 163, 184, 0.24) !important;
-}
-.resume-biography .grid:has(> .group) > .group:hover {
-  background: transparent !important;
-  box-shadow: none !important;
-  transform: none !important;
 }
 .resume-biography .grid:has(> .group) > .group > .flex > .flex-shrink-0 {
   display: none !important;
@@ -165,18 +155,28 @@
   white-space: pre-line;
 }
 
-/* Working Experience table */
-.work-experience-frame {
-  display: block;
-  width: min(1100px, 100%) !important;
-  height: 870px;
-  margin: 0 auto !important;
-  border: 0 !important;
-  background: transparent;
+/* Working Experience:
+   break the iframe out of Hugo's narrow prose column, same width language as the main CV area. */
+#work-experience .prose,
+#work-experience .prose-lg {
+  max-width: none !important;
+  width: 100% !important;
 }
 
-/* Use the exact attached Digital Twin figure and let it break wider
-   than the prose column while staying inside the viewport. */
+.work-experience-frame {
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1050px, calc(100vw - 72px)) !important;
+  max-width: none !important;
+  height: 735px;
+  margin: 0 auto !important;
+  border: 0 !important;
+  background: #0b0d10;
+}
+
+/* Digital Twin uploaded figure */
 #research img[alt="Digital Twin modelling framework"] {
   display: block;
   position: relative;
@@ -205,15 +205,12 @@
   }
 
   .work-experience-frame {
-    height: 1240px;
+    width: calc(100vw - 24px) !important;
+    height: 1160px;
   }
 
   #research img[alt="Digital Twin modelling framework"] {
     width: calc(100vw - 24px) !important;
     border-radius: 8px;
   }
-
-  .resume-biography .md\:col-span-8 > div:nth-child(1) { order: 1; }
-  .resume-biography .md\:col-span-8 > div:nth-child(2) { order: 3; }
-  .resume-biography .md\:col-span-8 > div:nth-child(3) { order: 2; }
 }

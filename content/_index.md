@@ -32,7 +32,7 @@ sections:
   - block: markdown
     id: work-experience
     content:
-      title: 'Working Experience'
+      title: ''
       subtitle: ''
       text: |-
         <iframe class="work-experience-frame" src="widgets/working-experience.html" title="Working Experience" loading="lazy"></iframe>
