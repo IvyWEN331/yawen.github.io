@@ -1,0 +1,28 @@
+{{ define "main" }}
+<div class="project-page">
+  <div class="project-page-inner">
+
+    <a class="project-back-link" href="{{ "/projects/" | relLangURL }}">
+      ← Projects
+    </a>
+
+    <header class="project-header">
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.summary }}
+        <div class="project-summary">{{ . | markdownify }}</div>
+      {{ end }}
+    </header>
+
+    {{ with .Resources.GetMatch "featured*" }}
+      <figure class="project-featured">
+        <img src="{{ .RelPermalink }}" alt="{{ $.Title }}">
+      </figure>
+    {{ end }}
+
+    <article class="project-content prose prose-slate dark:prose-invert max-w-none" data-pagefind-body>
+      {{ .Content }}
+    </article>
+
+  </div>
+</div>
+{{ end }}

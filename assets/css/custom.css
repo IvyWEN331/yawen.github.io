@@ -346,3 +346,200 @@
   font-size: 0.9em;
 }
 /* PATCH 13 END */
+
+/* PATCH 16 START */
+/* PATCH 16 — dedicated Project pages + smaller Publications typography */
+
+/* ---------- Project detail pages ---------- */
+
+.project-page {
+  width: 100%;
+  padding: 2.5rem 1.5rem 5rem;
+}
+
+.project-page-inner {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+}
+
+.project-back-link {
+  display: inline-block;
+  margin-bottom: 2.2rem;
+  font-size: 0.88rem;
+  color: rgb(156 162 255);
+  text-decoration: none;
+}
+
+.project-back-link:hover {
+  color: rgb(199 202 255);
+}
+
+.project-header {
+  max-width: 900px;
+  margin-bottom: 2rem;
+}
+
+.project-header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  font-weight: 760;
+}
+
+.project-summary {
+  max-width: 850px;
+  margin-top: 1rem;
+  color: rgb(176 183 194);
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+.project-summary p {
+  margin: 0;
+}
+
+.project-featured {
+  width: 100%;
+  margin: 2rem 0 2.4rem;
+  padding: 0;
+}
+
+.project-featured img {
+  display: block;
+  width: 100%;
+  max-height: 640px;
+  object-fit: contain;
+  margin: 0 auto;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.025);
+  box-shadow: 0 16px 44px rgba(0,0,0,0.28);
+}
+
+.project-content {
+  width: 100% !important;
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  font-size: 1rem !important;
+  line-height: 1.68 !important;
+  color: rgb(209 213 219);
+}
+
+.project-content p {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.project-content h3 {
+  margin-top: 2.4rem !important;
+  margin-bottom: 1rem !important;
+  color: #ffffff !important;
+  font-size: 1.35rem !important;
+  line-height: 1.25 !important;
+  font-weight: 720 !important;
+}
+
+.project-content ul {
+  margin-top: 0.7rem !important;
+  margin-bottom: 1.2rem !important;
+}
+
+.project-content ul li {
+  margin-top: 0.35rem !important;
+  margin-bottom: 0.35rem !important;
+}
+
+/* Project-page publications: smaller than normal body text. */
+.project-content ol {
+  margin-top: 0.8rem !important;
+  padding-left: 1.3rem !important;
+  font-size: 0.86rem !important;
+  line-height: 1.58 !important;
+  color: rgb(188 194 204) !important;
+}
+
+.project-content ol li {
+  margin-top: 0.55rem !important;
+  margin-bottom: 0.75rem !important;
+  padding-left: 0.2rem !important;
+}
+
+.project-content ol strong {
+  color: #ffffff;
+}
+
+.project-content a {
+  color: rgb(156 162 255);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.project-content a:hover {
+  color: rgb(199 202 255);
+  text-decoration: underline;
+}
+
+/* ---------- Homepage Publications ---------- */
+
+#papers .prose,
+#papers .prose-lg,
+#papers ol {
+  font-size: 0.88rem !important;
+  line-height: 1.58 !important;
+}
+
+#papers ol {
+  padding-left: 1.35rem !important;
+}
+
+#papers ol li {
+  margin-top: 0.55rem !important;
+  margin-bottom: 0.75rem !important;
+}
+
+#papers ol strong {
+  color: #ffffff;
+}
+
+#papers a {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .project-page {
+    padding: 1.6rem 1rem 3.5rem;
+  }
+
+  .project-back-link {
+    margin-bottom: 1.5rem;
+  }
+
+  .project-header h1 {
+    font-size: 2rem;
+  }
+
+  .project-summary {
+    font-size: 0.95rem;
+  }
+
+  .project-featured {
+    margin: 1.5rem 0 1.8rem;
+  }
+
+  .project-featured img {
+    border-radius: 10px;
+  }
+
+  .project-content {
+    font-size: 0.95rem !important;
+  }
+
+  .project-content ol,
+  #papers .prose,
+  #papers .prose-lg,
+  #papers ol {
+    font-size: 0.82rem !important;
+  }
+}
+/* PATCH 16 END */
