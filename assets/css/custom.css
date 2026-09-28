@@ -319,3 +319,30 @@
   color: #ffffff !important;
 }
 /* PATCH 12 END */
+
+/* PATCH 13 START */
+/* PATCH 13 — visible bullets for every Working Experience highlight */
+
+/* Remove the bullet that Patch 12 added before detail links. */
+.work-exp-highlights a::before {
+  content: none !important;
+}
+
+/* Force a real visible bullet for every highlight item. */
+.work-exp-highlights ul {
+  list-style-type: disc !important;
+  list-style-position: outside !important;
+  padding-left: 1.35rem !important;
+}
+
+.work-exp-highlights li {
+  display: list-item !important;
+  list-style-type: disc !important;
+  padding-left: 0.15rem !important;
+}
+
+.work-exp-highlights li::marker {
+  color: #d1d5db !important;
+  font-size: 0.9em;
+}
+/* PATCH 13 END */
