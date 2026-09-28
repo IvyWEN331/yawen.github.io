@@ -167,129 +167,22 @@
   white-space: pre-line;
 }
 
-/* process-map style DT framework */
-.dt-process-map {
+/* Digital Twin framework:
+   isolate the diagram from HugoBlox prose styling and deliberately
+   break it wider than the normal text column. */
+.dt-framework-frame {
+  display: block;
   position: relative;
-  margin: 1.6rem 0 1rem;
-  padding: 1.9rem 1.4rem 1.2rem;
-  border-radius: 20px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(124,131,255,0.04) 100%);
-  border: 1px solid rgba(148,163,184,0.16);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1180px, calc(100vw - 64px)) !important;
+  max-width: none !important;
+  height: 510px;
+  margin: 1.8rem 0 1.3rem !important;
+  border: 0 !important;
+  border-radius: 18px;
   overflow: hidden;
-}
-
-.dt-process-title {
-  text-align: center;
-  font-size: 1.38rem;
-  line-height: 1.2;
-  font-weight: 760;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.93);
-  margin-bottom: 1.9rem;
-}
-
-.dt-process-line {
-  position: absolute;
-  left: 6%;
-  right: 6%;
-  top: 6.05rem;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(255,255,255,0.38), rgba(255,255,255,0.78), rgba(255,255,255,0.38));
-}
-
-.dt-process-grid {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 2rem 2rem;
-  align-items: start;
-}
-
-.dt-process-anchor {
-  position: relative;
-  padding-top: 1.1rem;
-  text-align: center;
-}
-
-.dt-process-index {
-  position: relative;
-  z-index: 2;
-  display: inline-flex;
-  width: 2.15rem;
-  height: 2.15rem;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  border: 2px solid rgba(255,255,255,0.86);
-  background: #7c83ff;
-  color: #fff;
-  font-size: 0.9rem;
-  font-weight: 700;
-  margin-bottom: 0.55rem;
-}
-
-.dt-process-heading {
-  max-width: 220px;
-  margin: 0 auto;
-  font-size: 1rem;
-  line-height: 1.28;
-  font-weight: 700;
-  color: #f4f5f7;
-}
-
-.dt-process-track {
-  position: relative;
-  margin: 1rem auto 0;
-  max-width: 240px;
-  padding-top: 0.55rem;
-}
-.dt-process-track::before {
-  content: "";
-  position: absolute;
-  left: 0.32rem;
-  top: 0;
-  bottom: 0.35rem;
-  border-left: 2px dotted rgba(255,255,255,0.30);
-}
-
-.dt-process-node {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.82rem;
-  padding-left: 0;
-  margin-bottom: 1rem;
-}
-.dt-process-node:last-child {
-  margin-bottom: 0;
-}
-
-.dt-dot {
-  position: relative;
-  z-index: 1;
-  flex: 0 0 auto;
-  width: 0.72rem;
-  height: 0.72rem;
-  border-radius: 999px;
-  margin-top: 0.32rem;
-  background: #f0f2ff;
-  box-shadow: 0 0 0 4px rgba(124,131,255,0.16);
-}
-
-.dt-node-text strong {
-  display: block;
-  font-size: 0.98rem;
-  line-height: 1.25;
-  font-weight: 700;
-  color: #f5f7fb;
-}
-.dt-node-text span {
-  display: block;
-  margin-top: 0.18rem;
-  font-size: 0.84rem;
-  line-height: 1.35;
-  color: rgba(226,231,239,0.78);
+  background: #0b0d10;
 }
 
 @media (max-width: 900px) {
@@ -306,30 +199,12 @@
     white-space: pre-line;
   }
 
-  .dt-process-map {
-    padding: 1.4rem 1rem 1rem;
-  }
-  .dt-process-title {
-    font-size: 1.1rem;
-    margin-bottom: 1.3rem;
-  }
-  .dt-process-line {
-    display: none;
-  }
-  .dt-process-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  .dt-process-anchor {
-    text-align: left;
-    padding-top: 0;
-  }
-  .dt-process-heading {
-    max-width: none;
-    margin: 0;
+  .dt-framework-frame {
+    width: calc(100vw - 24px) !important;
+    height: 880px;
+    border-radius: 14px;
   }
 
-  /* keep order stable on mobile */
   .resume-biography .md\:col-span-8 > div:nth-child(1) { order: 1; }
   .resume-biography .md\:col-span-8 > div:nth-child(2) { order: 2; }
   .resume-biography .md\:col-span-8 > div:nth-child(3) { order: 4; }
