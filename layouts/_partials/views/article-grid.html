@@ -1,0 +1,5 @@
+{{- if eq .item.Type "projects" -}}
+  {{- partial "views/project-card.html" . -}}
+{{- else -}}
+  {{- partial "views/card.html" . -}}
+{{- end -}}
