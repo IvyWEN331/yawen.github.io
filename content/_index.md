@@ -11,10 +11,9 @@ sections:
       text: |-
         I am a Research Associate at the University of Cambridge, working at the intersection of architecture, digital twins, knowledge systems, and AI for the built environment.
 
-        Digital systems should help buildings and infrastructure deliver services more efficiently and intelligently. I explore how geometric, semantic, and dynamic operational information can be structured into shared knowledge that supports decisions across the built asset lifecycle and enables collaboration between people and AI.
-      button:
-        text: Download CV
-        url: uploads/Ya_Wen_CV.pdf
+        Digital systems should help buildings and infrastructure deliver services more efficiently and intelligently. I explore how geometric, semantic, and dynamic operational information can be structured into shared knowledge that supports decision-making in digital systems across the built asset lifecycle and enables collaboration between people and AI.
+
+        **Beyond academia, I am passionate about turning research into real-world impact.** I have worked closely with industry, government bodies, and asset owners on projects spanning digital construction, building operations, and smart infrastructure, particularly in Hong Kong, the UK, and Europe. I enjoy bringing research beyond papers and prototypes—translating ideas into methods, systems, and solutions that can make a tangible difference in practice. **I am always open to collaborations that connect ambitious research with real challenges in the built environment.**
       headings:
         about: 'Hi, I am Ya Wen'
         education: Education
@@ -31,22 +30,26 @@ sections:
         shape: circle
 
   - block: markdown
+    id: work-experience
+    content:
+      title: 'Working Experience'
+      subtitle: ''
+      text: |-
+        <iframe class="work-experience-frame" src="widgets/working-experience.html" title="Working Experience" loading="lazy"></iframe>
+    design:
+      columns: '1'
+
+  - block: markdown
     id: research
     content:
       title: 'Research Profile'
       subtitle: ''
       text: |-
-        My research explores how **physical buildings and digital representations can remain connected across the building lifecycle**. I work across architecture, BIM/GIS, reality capture, Digital Twins, semantic knowledge representation, and AI-enabled decision support.
-
-        A central theme is moving from a Digital Twin as a geometric model toward a **shared semantic world model** that can support people, building systems, and heterogeneous embodied agents. Current interests include Scan-to-BIM, ontology- and knowledge-graph-driven reasoning, multi-agent coordination, fire-safety inspection, and the use of digital building information to support operation and maintenance.
-
-        ### Digital Twin Modelling: Three Dimensions
-
         I interpret Digital Twin modelling through three complementary dimensions: **Maturity of Digital Twin**, **Scope of Digital Twin**, and **Temporal Dimension**. The framework below summarises how I structure this understanding across modelling intent, system scale, and time.
 
-        <iframe class="dt-framework-frame" src="widgets/digital-twin-framework.html" title="Digital Twin Modelling Framework" loading="lazy"></iframe>
+        ![Digital Twin modelling framework](media/digital-twin-dimensions.png)
 
-        Representative projects illustrating these dimensions are introduced below.
+        My research explores how **physical buildings and digital representations can remain connected across the building lifecycle**. A central theme is moving from a Digital Twin as a geometric model toward a **shared semantic world model** that can support people, building systems, and heterogeneous embodied agents. Current interests include Scan-to-BIM, ontology- and knowledge-graph-driven reasoning, multi-agent coordination, and the use of digital building information to support operation and maintenance.
     design:
       columns: '1'
 

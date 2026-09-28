@@ -21,7 +21,9 @@ role: Research Associate
 bio: |
   I am a Research Associate at the University of Cambridge, working at the intersection of architecture, digital twins, knowledge systems, and artificial intelligence for the built environment.
 
-  Digital systems should help buildings and infrastructure deliver services more efficiently and intelligently. I explore how geometric, semantic, and dynamic operational information can be structured into shared knowledge that supports decisions across the built asset lifecycle and enables collaboration between people and AI.
+  Digital systems should help buildings and infrastructure deliver services more efficiently and intelligently. I explore how geometric, semantic, and dynamic operational information can be structured into shared knowledge that supports decision-making in digital systems across the built asset lifecycle and enables collaboration between people and AI.
+
+  **Beyond academia, I am passionate about turning research into real-world impact.** I have worked closely with industry, government bodies, and asset owners on projects spanning digital construction, building operations, and smart infrastructure, particularly in Hong Kong, the UK, and Europe. I enjoy bringing research beyond papers and prototypes—translating ideas into methods, systems, and solutions that can make a tangible difference in practice. **I am always open to collaborations that connect ambitious research with real challenges in the built environment.**
 
 affiliations:
   - name: Postdoc
@@ -68,18 +70,38 @@ education:
     year: Sep 2012 – Jul 2016
 
 experience:
-  - role: Research Associate
-    org: University of Cambridge · Department of Engineering
+  - role: Postdoc Research Associate in Department of Engineering
+    org: University of Cambridge
     start: 2023-08-01
     summary: |
-      Research on digital twins, reality capture, semantic enrichment, AI-enabled building information systems, and European collaborative research projects including BUILDSPACE.
+      **Location:** Cambridge, UK
 
-  - role: Researcher / Project Manager
-    org: Hong Kong
-    start: 2019-01-01
-    end: 2022-12-31
+      - Lead the Digital Twin Construction task from building-level to city-level built assets for smart-city applications in the BUILDSPACE project.
+      - Participate in the AEGIR and MATBS projects on digital infrastructure development for enhanced operational flexibility and sustainability.
+      - Collaborate with 13 EU organisations.
+      - Contribute to major grant proposal submissions.
+
+  - role: Project Manager and Senior Researcher
+    org: Llewellyn and Partners Co. Ltd. (LPC) – HKU spin-out company
+    start: 2019-09-01
+    end: 2022-08-31
     summary: |
-      Research and project delivery in BIM, digital construction, common data environments, and built-asset information management.
+      **Location:** Hong Kong SAR, China
+
+      - Managed an EMSD construction project and supported digital transformation through the design and development of a Digital Twin / Common Data Environment platform for BIM automation.
+      - Led the development team for the Smart Asset Platform – AutoCDE.
+      - Designed, conducted, and delivered a CIC-accredited BIM Manager course for the Hong Kong industry.
+
+  - role: Architecture Intern
+    org: China Northeast Architecture Design and Research Institute
+    start: 2015-07-01
+    end: 2015-08-31
+    summary: |
+      **Location:** Liaoning, China
+
+      - Assisted in the analysis and integration of safety-compliance requirements into factory design.
+      - Worked with MEP engineers to optimise industrial process flow and functional layout.
+      - Conducted 3D and 4D BIM modelling for Ansteel Group Co., Ltd. in Liaoning.
 
 skills:
   - name: Research & Digital Built Environment
